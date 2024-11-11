@@ -20,11 +20,9 @@ This end-to-end data engineering project demonstrates a robust pipeline designed
 ## Pipeline Structure
 1. **Data Ingestion**: Data is ingested from an HTTP server into Azure Data Lake Storage Gen2 using Azure Data Factory, forming the raw layer.
 2. ## Trigger Scheduling in Azure Data Factory
-To ensure timely data processing, triggers were configured in Azure Data Factory for automatic pipeline execution at specific intervals:
+To ensure timely data processing, triggers I configured in Azure Data Factory for automatic pipeline execution at specific intervals:
 - **Incremental Load Trigger**: An event-based trigger initiates incremental loads whenever new data is detected in the source, minimizing redundancy and optimizing processing time.
 - **Weekly Aggregation Trigger**: For heavy transformations, a weekly trigger handles aggregation and analytics layers, preparing data for BI reporting and dashboards.
-
-This scheduling strategy optimizes resource usage and ensures data availability for real-time and batch reporting needs.
 
 3. **Sample Data Transformation in Databricks**:
    - **PySpark Transformations**:
